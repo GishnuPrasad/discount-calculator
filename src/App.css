@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+}
+
+/* Calculator Card */
+
+.calculator {
+  width: 450px;
+  max-width: 90%;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 22px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Heading */
+
+.heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.heading h1 {
+  font-size: 42px;
+  color: #202b4c;
+  margin-bottom: 5px;
+}
+
+.heading h1 span {
+  color: #4f46e5;
+}
+
+.heading p {
+  font-size: 17px;
+  color: #6b7280;
+}
+
+/* Inputs */
+
+.input-group {
+  margin-bottom: 22px;
+}
+
+.input-group label {
+  display: block;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  color: #374151;
+
+  margin-bottom: 8px;
+}
+
+.input-box {
+  position: relative;
+}
+
+.input-box input {
+  width: 100%;
+
+  padding: 15px 50px 15px 16px;
+
+  border: 1px solid #d9dce7;
+  border-radius: 10px;
+
+  background: #f8f9fc;
+
+  font-size: 16px;
+
+  color: #222;
+
+  outline: none;
+}
+
+.input-box input:focus {
+  border-color: #4f46e5;
+  background: white;
+}
+
+.input-box input::placeholder {
+  color: #9ca3af;
+}
+
+.input-box span {
+  position: absolute;
+
+  right: 16px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  font-size: 18px;
+  font-weight: bold;
+
+  color: #4b5563;
+}
+
+/* Results */
+
+.results {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.result {
+  width: 50%;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+.result p {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.result h2 {
+  font-size: 25px;
+}
+
+.save {
+  background: #effaf2;
+}
+
+.save p {
+  color: #238b45;
+}
+
+.save h2 {
+  color: #16803c;
+}
+
+.final {
+  background: #eef3ff;
+}
+
+.final p {
+  color: #2859a8;
+}
+
+.final h2 {
+  color: #174ea6;
+}
+
+/* Button */
+
+button {
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #4f46e5;
+
+  color: white;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+  .calculator {
+    padding: 25px;
+  }
+
+  .heading h1 {
+    font-size: 32px;
+  }
+
+  .results {
+    flex-direction: column;
+  }
+
+  .result {
+    width: 100%;
+  }
+}
