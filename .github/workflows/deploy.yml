@@ -3,7 +3,6 @@ name: Deploy React App
 on:
   push:
     branches:
-      - main
       - master
 
 permissions:
@@ -23,10 +22,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm install
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Build
         run: npm run build
@@ -45,6 +46,6 @@ jobs:
     needs: build
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
